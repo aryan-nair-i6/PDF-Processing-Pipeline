@@ -51,13 +51,14 @@ This project implements a multi-stage asynchronous processing pipeline using Pyt
 3.  **Install dependencies:**
     *(Note: Ensure you have a requirements.txt file or install manually based on imports)*
     ```bash
-    pip install langchain-openai langchain-community langchain-text-splitters sqlalchemy aiosqlite chromadb python-dotenv tenacity pypdf
+    pip install -r requirements.txt
     ```
 
 4.  **Configure Environment Variables:**
     Create a `.env` file in the root directory and add your OpenAI API key:
     ```env
     OPENAI_KEY=your_openai_api_key_here
+    FOLDER_PATH=path_of folder_to_be_tracked
     ```
 
 ### Usage
@@ -67,7 +68,7 @@ Run the main pipeline:
 python main.py
 ```
 
-The pipeline will start monitoring the `filefolder` directory (by default) and process any PDF files found. Logs will be written to `app.log`.
+The pipeline will start monitoring the `path_mention_in_FOLDERPATH` directory (by default) and process any PDF files found. Logs will be written to `app.log`.
 
 ## Project Structure
 
